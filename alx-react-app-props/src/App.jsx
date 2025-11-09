@@ -12,8 +12,12 @@ import UserProfile from './components/UserProfile';
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-    <>
+   const userData = {
+    name: 'Alice Johnson',
+    age: 28,
+    bio: 'Frontend developer and travel enthusiast.',
+  };
+  return (<>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -44,9 +48,16 @@ function App() {
         name="Alice"
         age="25"
         bio="Loves hiking and photography"
-      <p className="read-the-docs">
+       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      </div>
+      <UserContext.Provider value={userData}>
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <h1>User Profile</h1>
+        <ProfilePage />
+      </div>
+    </UserContext.Provider>
     </>
   )
 }
