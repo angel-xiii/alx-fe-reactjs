@@ -7,6 +7,7 @@ import Header from './components/Header.jsx'
 import MainContent from './components/MainContent.jsx'
 import Footer from './components/Footer.jsx'
 import UserProfile from './components/UserProfile';
+import Counter from './components/Counter';
 
 
 function App() {
@@ -44,10 +45,15 @@ function App() {
         name="Alice"
         age="25"
         bio="Loves hiking and photography"
-      <p className="read-the-docs">
+       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
-    </>
+       </p>
+      </div>
+      <div>
+        <h1 style={{textAlign: 'center'}}> My Counter App</h1>
+        <Counter />
+      </div>
+  </>
   )
 }
 
